@@ -1,0 +1,22 @@
+.listItem {
+    background-color: var(--mainColor);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+.listItem > a {
+    color: white;
+}
+
+.colorStyle > a {
+    color: var(--secondaryColor);
+}
+
+.isActiveLink {
+    text-decoration: underline;
+    font-size: 1.7rem;
+    background-color: lightblue;
+    color: red
+}

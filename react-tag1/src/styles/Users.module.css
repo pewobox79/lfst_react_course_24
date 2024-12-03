@@ -1,0 +1,23 @@
+.userItemWrapper {
+    width: 95%;
+    margin: auto;
+    padding: 10px;
+    min-height: 40px;
+
+}
+
+.userItemWrapper:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    border-radius: 5px
+}
+
+.userItemInner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.button:hover{
+    background-color: #535bf2;
+}
