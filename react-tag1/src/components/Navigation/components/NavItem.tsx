@@ -5,7 +5,6 @@ import {NavLink} from "react-router";
 
 const NavItem = ({title, href}: NavItemTypes) => {
 
-    console.log("styles", styles)
     const [isRed, setIsRed] = useState(false);
 
     // state update erst nach dem ersten re-Render
@@ -14,7 +13,6 @@ const NavItem = ({title, href}: NavItemTypes) => {
         console.log("state in function", isRed)
     }
 
-    console.log("state outer function", isRed)
 
     const mylistStyle = `${styles.listItem} ${isRed ? styles.colorStyle: ""}`
 

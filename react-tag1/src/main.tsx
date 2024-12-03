@@ -10,6 +10,7 @@ import DashBoardLayout from "./layouts/DashBoardLayout.tsx";
 import SingleUser from "./pages/admin/Users/SingleUser";
 import Workplace from "./pages/admin/Users/Workplace";
 import Users from "./pages/admin/Users";
+import LoginPage from "./pages/LoginPage.tsx";
 
 
 createRoot(document.getElementById('root')!).render(
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
                 <Route path={ "/" } element={ <MainLayout/> } >
                     <Route index element={ <Homepage/> }/>
                     <Route path={ "aboutme" } element={ <AboutUsPage/> }/>
+                    <Route path={ "login" } element={ <LoginPage/> }/>
                     <Route path={"*"} element={<h1>wild card</h1>}/>
                 </Route>
 

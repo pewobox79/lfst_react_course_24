@@ -7,7 +7,7 @@ const Users =()=>{
 
        {/* <EffectExercise/>*/}
 
-        <UserOverview/>
+
         <AbortExercise/>
     </>
 }
