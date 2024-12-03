@@ -12,7 +12,7 @@ const RegisterForm = () => {
     }
 
     const registerSchema = yup.object({
-        firstname: yup.string().required(),
+        firstname: yup.string().required("Vorname bitte ausfüllen").min(3, "Länger wie drei"),
         lastname: yup.string().required(),
         email: yup.string().email().required(),
         password: yup.string().required()
