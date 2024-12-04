@@ -11,28 +11,33 @@ import SingleUser from "./pages/admin/Users/SingleUser";
 import Workplace from "./pages/admin/Users/Workplace";
 import Users from "./pages/admin/Users";
 import LoginPage from "./pages/LoginPage.tsx";
+import ContextLayout from "./layouts/ContextLayout.tsx";
 
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path={ "/" } element={ <MainLayout/> } >
-                    <Route index element={ <Homepage/> }/>
-                    <Route path={ "aboutme" } element={ <AboutUsPage/> }/>
-                    <Route path={ "login" } element={ <LoginPage/> }/>
-                    <Route path={"*"} element={<h1>wild card</h1>}/>
-                </Route>
+                <Route element={<ContextLayout/>}>
 
-                <Route path={"admin"} element={<DashBoardLayout/>}>
-                    <Route index element={<h2>Dashboard</h2>}/>
-                    <Route path={"users"} >
-                        <Route index element={<Users/>}/>
-                        <Route path={":userId"} >
-                            <Route index element={<SingleUser/>}/>
-                            <Route path={":workplace"} element={<Workplace/>}/>
+                    <Route path={ "/" } element={ <MainLayout/> }>
+                        <Route index element={ <Homepage/> }/>
+                        <Route path={ "aboutme" } element={ <AboutUsPage/> }/>
+                        <Route path={ "login" } element={ <LoginPage/> }/>
+                        <Route path={ "*" } element={ <h1>wild card</h1> }/>
+                    </Route>
+
+                    <Route path={ "admin" } element={ <DashBoardLayout/> }>
+                        <Route index element={ <h2>Dashboard</h2> }/>
+                        <Route path={ "users" }>
+                            <Route index element={ <Users/> }/>
+                            <Route path={ ":userId" }>
+                                <Route index element={ <SingleUser/> }/>
+                                <Route path={ ":workplace" } element={ <Workplace/> }/>
+                            </Route>
                         </Route>
                     </Route>
+
                 </Route>
             </Routes>
 

@@ -30,10 +30,8 @@ const RegisterForm = () => {
         }
     })
 
-
     return <div>
         <h4>Register new User</h4>
-
         <form onSubmit={ formik.handleSubmit }>
             <InputField fieldName={ "firstname" }
                         label={ "Vorname" }

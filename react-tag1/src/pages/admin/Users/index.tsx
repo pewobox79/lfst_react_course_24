@@ -1,14 +1,14 @@
 import UserOverview from "../../../components/Users/UserOverview.tsx";
 import AbortExercise from "../../../components/Exercises/AbortExercise.tsx";
 
-const Users =()=>{
+const Users = () => {
 
     return <>
 
-       {/* <EffectExercise/>*/}
+        {/* <EffectExercise/>*/ }
+        <UserOverview/>
 
-
-        <AbortExercise/>
+        {/*<AbortExercise/>*/ }
     </>
 }
 
