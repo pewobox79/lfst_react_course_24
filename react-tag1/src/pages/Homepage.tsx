@@ -1,5 +1,6 @@
 import Button from "../components/globals/Button.tsx";
 import {useState} from "react";
+import {shuffle} from "../utils/shuffleHelper.ts";
 
 const Homepage = () => {
 
@@ -7,7 +8,6 @@ const Homepage = () => {
     function handleClick() {
         setValue(value +1)
     }
-
     return <>
         <h1>Homepage</h1>
         <h3>{value}</h3>
