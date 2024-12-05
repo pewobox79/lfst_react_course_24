@@ -12,6 +12,7 @@ import Workplace from "./pages/admin/Users/Workplace";
 import Users from "./pages/admin/Users";
 import LoginPage from "./pages/LoginPage.tsx";
 import ContextLayout from "./layouts/ContextLayout.tsx";
+import Map from "./components/Map";
 
 
 createRoot(document.getElementById('root')!).render(
@@ -25,6 +26,7 @@ createRoot(document.getElementById('root')!).render(
                         <Route path={ "aboutme" } element={ <AboutUsPage/> }/>
                         <Route path={ "login" } element={ <LoginPage/> }/>
                         <Route path={ "*" } element={ <h1>wild card</h1> }/>
+                        <Route path={ "map" } element={ <Workplace/> }/>
                     </Route>
 
                     <Route path={ "admin" } element={ <DashBoardLayout/> }>

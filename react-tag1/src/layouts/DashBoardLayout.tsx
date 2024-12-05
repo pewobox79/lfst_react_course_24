@@ -6,7 +6,7 @@ const DashBoardLayout=()=>{
 
     const context = useContext(UserContext)
 
-    if(!context.userState){
+    if(context.userState){
         return <Navigate to={"/login" } replace/>
     }
 

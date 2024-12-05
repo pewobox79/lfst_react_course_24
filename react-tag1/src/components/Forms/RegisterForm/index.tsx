@@ -1,8 +1,16 @@
 import InputField from "../components/InputField.tsx";
 import {useFormik} from "formik";
 import * as yup from "yup";
+import {useLocalStorage} from "../../../hooks/useLocalStorage.ts";
 
 const RegisterForm = () => {
+
+
+    const {value, setStoredValue} = useLocalStorage("lfst_user");
+
+    console.log("Register", value)
+
+
     const INIT_VALUE = {
         firstname: "",
         lastname: "",
@@ -25,7 +33,7 @@ const RegisterForm = () => {
         validationSchema: registerSchema,
         onSubmit: values => {
             console.log("on submit,", values)
-
+            setStoredValue(values)
             formik.resetForm()
         }
     })
