@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import {MapContainer, TileLayer, Marker, Popup, Polygon} from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import Pin from '../../assets/map/location-pin.png'
@@ -35,12 +35,22 @@ console.log("pin", Pin)
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
 
+
             {geoData?.map((location, index) => (
                 <Marker
                     key={index}
                     position={[location.lat, location.lng]}
                     icon={customIcon}
-                    riseOnHover={true}
+                    eventHandlers={{
+                        mouseover: (e) => {
+                            const marker = e.target;
+                            marker.openPopup();
+                        },
+                        mouseout: (e) => {
+                            const marker = e.target;
+                            marker.closePopup();
+                        },
+                    }}
                 >
                     <Popup >
                         <h3>{location.title}</h3>

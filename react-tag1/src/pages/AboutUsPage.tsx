@@ -1,7 +1,8 @@
+import MemoAndCallback from "../components/Exercises/MemoAndCallback";
 
 const AboutUsPage = () => {
 
-    return <h1> About me </h1>
+    return <MemoAndCallback/>
 }
 
 

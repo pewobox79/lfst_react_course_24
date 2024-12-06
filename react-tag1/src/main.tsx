@@ -16,7 +16,6 @@ import Map from "./components/Map";
 
 
 createRoot(document.getElementById('root')!).render(
-    <StrictMode>
         <BrowserRouter>
             <Routes>
                 <Route element={<ContextLayout/>}>
@@ -45,5 +44,4 @@ createRoot(document.getElementById('root')!).render(
 
 
         </BrowserRouter>
-    </StrictMode>,
 )

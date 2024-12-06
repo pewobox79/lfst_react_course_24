@@ -1,6 +1,8 @@
 import Button from "../components/globals/Button.tsx";
 import {useState} from "react";
 import {shuffle} from "../utils/shuffleHelper.ts";
+import ReRenderExercise from "../components/Exercises/ReRenderExercise";
+import Comp1 from "../components/Exercises/ReRenderExercise/Comp1.tsx";
 
 const Homepage = () => {
 
@@ -16,6 +18,10 @@ const Homepage = () => {
             style={ {backgroundColor: "green", border: "3px solid red", fontSize: "3rem"} }
             label={ "neues label" }
             className={ "small" }/>
+
+        <ReRenderExercise>
+            <Comp1/>
+        </ReRenderExercise>
     </>
 
 }
